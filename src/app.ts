@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http:*.qubix.fr:*');
+    res.setHeader('Access-Control-Allow-Origin', ['http://qubix.fr:10002', 'http:noel.qubix.fr']);
     res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS, POST, PUT');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     // res.setHeader('Access-Control-Allow-Credentials', true);
