@@ -33,6 +33,11 @@ let peoplesCollection: mongodb.Collection;
 let themesCollection: mongodb.Collection;
 
 client.connect((err: any) => {
+
+    if (err) {
+        console.log('DB CONNECTION ERROR', err);
+    }
+
     themesCollection = client.db('christmas-lottery').collection('themes');
     peoplesCollection = client.db('christmas-lottery').collection('peoples');
 
